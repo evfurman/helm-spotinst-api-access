@@ -1,0 +1,18 @@
+# AWS Region of K8s cluster
+region: 
+
+# Prod or Nonprod
+vpc: 
+
+# Security Group to attach to ALB
+# (Must whitelist Spotinst servers IP ranges)
+# http://blog.spotinst.com/2016/08/04/elastigroup-kubernetes-minions-steroids/
+# 13.90.255.25/32
+# 13.90.103.164/32
+# 13.90.101.230/32
+# 13.90.100.43/32
+sgs: 
+
+# Route53 public root domain
+domain:
+

@@ -1,0 +1,14 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: spotinst-api-access
+rules:
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["update"]
+- apiGroups: [""]
+  resources: ["nodes", "pods", "replicationcontrollers", "services", "limitranges"]
+  verbs: ["list"]
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["delete"]

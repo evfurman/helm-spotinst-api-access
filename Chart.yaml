@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart providing Spotinst integration with Kubernetes
+name: spotinst-api-access
+version: 0.1.0
