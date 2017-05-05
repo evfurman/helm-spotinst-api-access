@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spotinst-api-access
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+spec:
+  type: LoadBalancer
+  loadBalancerSourceRanges:
+  - 52.20.226.122/32
+  - 13.90.255.25/32
+  - 13.90.103.164/32
+  - 13.90.101.230/32
+  - 13.90.100.43/32
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    app: tectonic-lb
+    component: ingress-controller
