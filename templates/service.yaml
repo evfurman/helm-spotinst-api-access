@@ -18,5 +18,5 @@ spec:
     protocol: TCP
     targetPort: 443
   selector:
-    app: tectonic-lb
+    k8s-app: tectonic-lb
     component: ingress-controller
