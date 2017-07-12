@@ -1,12 +1,12 @@
 kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1alpha1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: spotinst-api-access
-  namespace: default
+  namespace: tectonic-system
 subjects:
 - kind: ServiceAccount
   name: spotinst-api-access
-  namespace: default
+  namespace: tectonic-system
 roleRef:
   kind: ClusterRole
   name: spotinst-api-access
